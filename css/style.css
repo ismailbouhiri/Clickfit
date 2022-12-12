@@ -24,7 +24,7 @@ p {
 /* navigation  style */
 
 nav .brand-color {
-  color: crimson;
+  color: orange;
 }
 
 nav.r-nav {
@@ -35,17 +35,22 @@ nav.r-nav {
 
 nav .navbar-brand {
   font-size: 30px;
-  color: black;
-  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
 
 nav .navbar-nav li a {
-  color: black !important;
+  color: white !important;
   font-size: 16px;
   letter-spacing: 0.05em;
   font-weight: 600;
   font-family: "Nunito", sans-serif;
+}
+
+nav .nav-item:first-child a {
+  border-bottom: 2px solid orange;
+  padding-bottom: 1px;
 }
 
 nav .navbar-nav li {
@@ -53,7 +58,7 @@ nav .navbar-nav li {
 }
 
 nav.r-nav.stickyAdd {
-  background-color: black !important;
+  background-color: #1b1a17 !important;
   padding: 15px 0;
   box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.05);
   transition: 0.4s all ease-in-out;
@@ -65,16 +70,12 @@ nav.stickyAdd .navbar-brand {
   transition: 0.4s all;
 }
 
-nav.stickyAdd .navbar-nav .nav-link {
-  color: #fff !important;
-}
-
 nav.stickyAdd .brand-color {
   color: #fff;
 }
 
 nav.stickyAdd .navbar-brand {
-  color: crimson;
+  color: orange;
 }
 
 .navbar .hamburger {
@@ -88,11 +89,51 @@ nav.stickyAdd .hamburger {
 
 /* Header Section Start */
 
-header
-{
+header {
   height: 100vh;
   width: 100%;
-  background: url(../images/);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/630-image-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
+.header-content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 150px;
+}
+
+.content-box {
+  max-width: 700px;
+  color: #fff;
+}
+
+.content-box h1 {
+  font-size: 30px;
+  color: white;
+}
+
+.content-box h4 {
+  font-size: 56px;
+}
+.ticket {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background-color: orange;
+  color: black;
+  font-weight: 600;
+}
+
+.ticket:hover {
+  color: orange;
+  border: 1px solid orange !important;
+  background: none;
+}
+.content-box p {
+  color: darkgoldenrod;
+}
 /* Header Section End   */
