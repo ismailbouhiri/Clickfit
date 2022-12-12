@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #fdf5e7;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  color: #6c757d;
+}
+
+/* navigation  style */
+
+nav .brand-color {
+  color: crimson;
+}
+
+nav.r-nav {
+  background: transparent;
+  padding: 20px 0;
+  transition: 0.5s all;
+}
+
+nav .navbar-brand {
+  font-size: 30px;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+nav .navbar-nav li a {
+  color: black !important;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+}
+
+nav .navbar-nav li {
+  margin-left: 15px;
+}
+
+nav.r-nav.stickyAdd {
+  background-color: black !important;
+  padding: 15px 0;
+  box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.05);
+  transition: 0.4s all ease-in-out;
+}
+
+nav.stickyAdd .navbar-brand {
+  /* color: black; */
+  font-size: 32px;
+  transition: 0.4s all;
+}
+
+nav.stickyAdd .navbar-nav .nav-link {
+  color: #fff !important;
+}
+
+nav.stickyAdd .brand-color {
+  color: #fff;
+}
+
+nav.stickyAdd .navbar-brand {
+  color: crimson;
+}
+
+.navbar .hamburger {
+  color: black;
+}
+
+nav.stickyAdd .hamburger {
+  color: #fff;
+}
+/* endOf navigation Style  */
+
+/* Header Section Start */
+
+header
+{
+  height: 100vh;
+  width: 100%;
+  background: url(../images/);
+}
+
+/* Header Section End   */
