@@ -140,15 +140,9 @@ header {
 /* Header Section End   */
 
 /* Join Us section start  */
-.join-us {
-  margin-top: 4rem;
-}
 
-.join-us-list {
-  padding: 2rem;
-}
-.join-us img {
-  margin: 10px;
+.join-us {
+  padding: 50px 0rem;
 }
 
 .join-us h1 {
@@ -166,6 +160,7 @@ header {
   background: url("../assets/icones/checkmark.svg") no-repeat left center;
   font-weight: 600;
   padding: 20px 20px 20px 60px;
+  transition: 0.5s all;
 }
 
 /* Join Us section End    */
