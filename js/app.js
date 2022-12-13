@@ -18,4 +18,13 @@ $(document).ready(() => {
         loopCount: Infinity,
         startDelay: 1000
     });
+
+    // owl carousel
+
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        items: 1,
+    });
 })

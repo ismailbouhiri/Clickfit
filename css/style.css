@@ -3,7 +3,7 @@
   margin: 0;
 }
 body {
-  background-color: #fdf5e7;
+  background-color: white;
 }
 h1,
 h2,
@@ -164,3 +164,12 @@ header {
 }
 
 /* Join Us section End    */
+
+/* Carousel section || about us Start */
+
+.about-us-class .test-item{
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+/* Carousel section || about us End   */
