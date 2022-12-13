@@ -3,7 +3,7 @@
   margin: 0;
 }
 body {
-  background-color: white;
+  background-color: #fdf5e7;
 }
 h1,
 h2,
@@ -11,7 +11,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "poppins", sans-serif;
 }
 
 p {
@@ -24,7 +24,7 @@ p {
 /* navigation  style */
 
 nav .brand-color {
-  color: orange;
+  color: #d95d37;
 }
 
 nav.r-nav {
@@ -49,7 +49,7 @@ nav .navbar-nav li a {
 }
 
 nav .nav-item:first-child a {
-  border-bottom: 2px solid orange;
+  border-bottom: 2px solid #d95d37;
   padding-bottom: 1px;
 }
 
@@ -75,7 +75,7 @@ nav.stickyAdd .brand-color {
 }
 
 nav.stickyAdd .navbar-brand {
-  color: orange;
+  color: #d95d37;
 }
 
 .navbar .hamburger {
@@ -85,6 +85,7 @@ nav.stickyAdd .navbar-brand {
 nav.stickyAdd .hamburger {
   color: #fff;
 }
+
 /* endOf navigation Style  */
 
 /* Header Section Start */
@@ -103,8 +104,7 @@ header {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: end;
-  padding-bottom: 150px;
+  align-items: center;
 }
 
 .content-box {
@@ -123,14 +123,14 @@ header {
 .ticket {
   text-decoration: none;
   padding: 0.5rem 1rem;
-  background-color: orange;
+  background-color: #d95d37;
   color: black;
   font-weight: 600;
 }
 
 .ticket:hover {
-  color: orange;
-  border: 1px solid orange !important;
+  color: #d95d37;
+  border: 1px solid #d95d37 !important;
   background: none;
 }
 .content-box p {
@@ -141,12 +141,15 @@ header {
 
 /* Join Us section start  */
 
+
 .join-us {
   padding: 50px 0rem;
 }
-
+.titles
+{
+  margin-bottom: 20px;
+}
 .join-us h1 {
-  font-family: "poppins", sans-serif;
   font-weight: 600;
 }
 
@@ -167,9 +170,41 @@ header {
 
 /* Carousel section || about us Start */
 
-.about-us-class .test-item{
+.about-us-class {
+  background-color: #f6eade;
+  padding: 4rem;
+}
+
+.about-us-class .slide-item {
   max-width: 500px;
-  margin: 50px auto;
+  margin: 10px auto;
+}
+
+.about-us-class .slide-item .slide-img
+{
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  border: 2px solid #d95d37;
+  /* margin-top: 20px; */
+}
+
+
+.about-us-class .slide-item .stars i {
+  color: goldenrod;
+}
+
+.about-us-class h2 {
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 5px auto 5px auto;
+}
+
+.about-us-class .slide-item h4 {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0 auto 4px auto;
 }
 
 /* Carousel section || about us End   */
