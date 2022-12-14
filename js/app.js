@@ -1,3 +1,4 @@
+var img;
 function slideItem(name, review, avatarUrl) {
     const item = $('<div>').addClass("text-center slide-item item");
     const avatar = $('<div>').addClass("mx-auto rounded-circle slide-img").css(
@@ -37,8 +38,107 @@ function carouselItemsGenerator(images) {
     });
 }
 
+const browseBtnHandler = () => {
+    $('#fileSelectorInput').click();
+};
+
+const deleteHandler = () => {
+    $('#dragger').html($(`
+    <div class="icon d-flex justify-content-center">
+        <i class="fa-solid fa-images"></i>
+    </div>
+    <h2 class="dragMsg text-center">Drag and drop image</h2>
+    <h3 class="dragMsg1 text-center">Or</h3>
+    <div class="d-grid gap-2 col-6 mx-auto">
+    <button
+      class="btn btn-outline-secondary text-center mx-auto btn-sm browseFileBtn"
+      onclick="browseBtnHandler()"
+    >
+      Browse file
+    </button>
+    </div>
+    <input type="file" id="fileSelectorInput" hidden/>`))
+        .removeClass('active');
+    $('#filename').html("");
+    img = '';
+}
+
+const uploadFileandler = (file, dragger) => {
+    const validFileExtensions = ['image/jpeg', 'image/jpg', 'image/png'];
+    if (validFileExtensions.includes(file.type)) {
+        const fileReader = new FileReader();
+        fileReader.onload = () => {
+            let fileUrl = fileReader.result;
+            img = fileUrl;
+            let imgTag = $(`<img src="${fileUrl}" alt="image input"/>`)
+            dragger.html(imgTag);
+            if (!($('.img-name').length)) {
+                $('#filename').html($('<p>').text(`${file.name.split('.')[0]}`)
+                    .addClass('img-name'));
+                $('#filename').append($('<i>')
+                    .addClass('fa-solid fa-trash-can')
+                    .click(deleteHandler));
+            }
+            else
+                $('.img-name').text(`${file.name.split('.')[0]}`);
+        }
+        fileReader.readAsDataURL(file);
+        dragger.addClass('active');
+    }
+}
+
+function UploadImg() {
+    if (img) {
+        $('.close-popup').click();
+        $('.carousel-inner').append($('<div>').addClass('carousel-item'))
+            .append($('<div>'))
+            .addClass('slide-tran')
+            .css(
+                'background-image', `url(${img})`
+            );
+        img = '';
+    }
+}
+
+function setupListners() {
+    let dragger = $('#dragger');
+    let draggerMsg = $('.dragMsg');
+    let fileSelector = $('#fileSelectorInput');
+
+
+    fileSelector.on("change", function (e) {
+        console.log(this.files[0]);
+        let file = this.files[0];
+        uploadFileandler(file, dragger);
+    });
+
+    dragger.on('dragover', (e) => {
+        e.preventDefault();
+        draggerMsg.text("Release to upload image");
+    })
+
+    dragger.bind('dragleave', function () {
+        draggerMsg.text("Drag and drop image");
+
+    });
+
+    dragger.bind('drop', function (e) {
+        e.preventDefault();
+        let file = e.originalEvent.dataTransfer.files[0];
+        uploadFileandler(file, dragger);
+    });
+
+}
+
+
 $(document).ready(() => {
+
+    setupListners();
+
     getReviews(4);
+
+
+
     $(window).on('scroll', () => {
         let scroll = $(window).scrollTop();
         if (scroll >= 50) {
@@ -48,6 +148,7 @@ $(document).ready(() => {
             $('.sticky').removeClass('stickyAdd')
         }
     })
+
     new Typed(".event", {
         strings: ['Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dolorum in non, ut possimus voluptates.'],
         showCursor: false,

@@ -11,7 +11,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 p {
@@ -120,6 +120,7 @@ header {
 .content-box h4 {
   font-size: 56px;
 }
+
 .ticket {
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -141,12 +142,10 @@ header {
 
 /* Join Us section start  */
 
-
 .join-us {
   padding: 50px 0rem;
 }
-.titles
-{
+.titles {
   margin-bottom: 20px;
 }
 .join-us h1 {
@@ -166,9 +165,6 @@ header {
   transition: 0.5s all;
 }
 
-
-
-
 /* Join Us section End    */
 
 /* Carousel section || about us Start */
@@ -183,8 +179,7 @@ header {
   margin: 10px auto;
 }
 
-.about-us-class .slide-item .slide-img
-{
+.about-us-class .slide-item .slide-img {
   background-repeat: no-repeat;
   background-size: cover;
   width: 150px;
@@ -192,7 +187,6 @@ header {
   border: 2px solid #d95d37;
   /* margin-top: 20px; */
 }
-
 
 .about-us-class .slide-item .stars i {
   color: goldenrod;
@@ -211,3 +205,109 @@ header {
 }
 
 /* Carousel section || about us End   */
+
+/* Drag and drop style */
+
+#dragger_wrapper {
+  background-color: black;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+#dragger {
+  background-color: #cdcdcd;
+  border-radius: 10px;
+  border: 2px dashed black;
+  padding: 20px;
+}
+
+#dragger img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#filename .img-name {
+  font-weight: 600;
+  color: black;
+}
+
+#dragger.active {
+  border: 2px dashed #d95d37;
+}
+
+.icon {
+  color: black;
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.dragMsg1 {
+  font-size: 18px;
+}
+
+.dragMsg,
+.dragMsg1 #filename {
+  font-weight: bolder;
+  font-size: 18px;
+  color: black;
+  margin: 10px;
+}
+.fa-trash-can {
+  color: rgb(224, 73, 73);
+}
+
+#filename {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.browseFileBtn {
+  color: black !important;
+  border: 2px solid black !important;
+  background: none !important;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  padding: 5px !important;
+  background-color: #d95d37 !important;
+  border-radius: 5px;
+}
+
+.add-img-btn {
+  padding: 0.5rem 1rem;
+  background-color: rgb(228, 226, 226);
+  color: black;
+  font-weight: 600;
+  outline: none !important;
+  border: none;
+}
+
+.add-img-btn:hover {
+  color: #d95d37;
+  border: 1px solid #d95d37 !important;
+  background: none !important;
+}
+
+.slide-tran {
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 400px;
+  height: 500px;
+  border-radius: 5px;
+}
+
+.transformation {
+  padding: 40px;
+}
+
+.transformation .titles h2 {
+  font-weight: 600;
+  line-height: 1.5;
+}
